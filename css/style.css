@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+:root {
+    --backgroundActive: rgb(42, 16, 192);
+    --hoverBackground: rgb(210, 210, 211);
+    --background: white;
+    --backgrounBlock: white;
+    --mainBackground: rgb(42, 16, 192);
+    --borderColor: rgb(42, 16, 192);
+    --totalButtonActive: rgb(73, 47, 223);
+    --borderColor2: grey;
+    --backgroundWhite: white;
+    --colorFooterHeader: white;
+    --colorText: grey;
+    --colorTextActive: white;
+    --colorTextMain: black;
+    --boxshadow: -2px -1px 43px 6px rgba(0,0,0,0.09);
+}
+body{
+    background-color: var(--background); 
+}
+
+.active{
+    color: var(--colorTextActive); 
+}
+form i{
+    color: var(--colorText);
+}
+.active-button{
+    color: var(--colorTextActive);
+    background-color: var(--backgroundActive);
+}
+li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+li a{
+    text-decoration: none;
+    color: var(--colorFooterHeader); 
+}
+h1{
+    user-select: none;
+}
+h2{
+    font-size: 28px;
+    line-height: 36px;
+    user-select: none; 
+}
+h3{
+    font-size: 14px;
+    line-height: 25px;
+}
+p{
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--colorText);
+}
+button{
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--backgroundWhite);
+    border: 2px solid var(--borderColor);
+    min-width: 100px;
+}
+#adress{
+    position: absolute;
+    top: 73px;
+    left: 115px;
+}
+.container{
+    max-width: 1920px;
+    margin: 0 auto;  
+}
+.padding_side{
+    padding: 20px 100px;
+}
+.header, .footer{
+    color: var(--colorFooterHeader);
+    background-color: var(--mainBackground);
+    user-select: none;
+}
+.header__search, li a{
+    transition-timing-function: ease;
+    transition-duration: .2s;
+}
+.header__search:hover{
+    background-color: var(--hoverBackground);
+}
+li a:hover{
+    color: var(--hoverBackground);
+}
+.header__content form{
+    position: relative;
+}
+.header__content input{
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 40px;
+    border-radius: 20px;
+    border: none;
+    width: 500px;
+    outline: none;
+}
+.header__content .fa-search{
+    position: absolute;
+    left: 16px;
+    top: 10px;
+}
+.header__content, .header__content ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__content ul{
+    justify-content: space-around;
+}
+.main__content{
+    display: flex; 
+}
+.main__left{
+    margin-right: 10px;
+    width: 75%;
+}
+.main__product{
+    box-shadow: var(--boxshadow);
+    padding: 20px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: var(--backgrounBlock);
+}
+.main__intro{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.main__removeproduct{
+    color: var(--colorText);
+    border: none;
+}
+.main__removeitem button:hover, .main__enter:hover{
+    color: var(--colorTextActive);
+    background-color: var(--backgroundActive);
+}
+.tooltip{
+    display:none;
+    width: 220px;
+    background-color: var(--backgroundWhite);
+    border: 1px solid var(--borderColor2);
+    border-radius: 3px;
+    text-align: center;
+    position: absolute;
+    top: 18px;
+    left: 226px;
+    z-index: 1;
+}
+.fa-question-circle:hover + .tooltip{
+ display: block;
+}
+.main__intro i {
+    color: var(--colorText);
+}
+.main__total{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.main__right button{
+    color: var(--colorTextActive);
+    background-color: var(--mainBackground);
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main__input{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main__buttons{
+    display: flex;
+    flex-direction: column;
+}
+.main__buttons p{
+    place-items:initial;
+}
+.main__button:hover{
+    background-color: var(--totalButtonActive);
+
+}
+.main__input input{
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--borderColor2);
+}
+.main__customer{
+    justify-content:initial;
+    box-shadow: var(--boxshadow);
+}
+.main__data{
+    display: flex;
+}
+.main__photo img{
+    max-width: 175px;
+    margin-right: 16px;
+    border-radius: 6px;
+}
+
+.d-none{
+    display: none;
+}
+.remove-product{
+    margin-bottom: 0;
+}
+.main__item{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__item:last-of-type{
+    margin-bottom: 0px;
+}
+.main__quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;   
+}
+.main__quantity input{
+    max-width: 50px;
+}
+.active{
+    color: var(--colorTextMain); 
+}
+.main__customer{
+    box-shadow: var(--boxshadow);
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: var(--backgrounBlock);
+}
+.fa-question-circle{
+    user-select: none;
+    position: absolute;
+    top: 18px;
+    left: 201px;
+}
+.main__customer button{
+    margin-bottom: 0;
+}
+.main__delivery{
+    box-shadow: var(--boxshadow);
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: var(--backgrounBlock);
+}
+.main__delivery .main__input{
+    flex-direction: column;
+    align-items: start;
+}
+.delivery{
+    margin-right: 20px;
+}
+.main__selfservice{
+    display: flex;
+    align-items: baseline;
+}
+.main__payment{
+    box-shadow: var(--boxshadow);
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: var(--backgrounBlock);
+}
+.main__payment .main__input{
+    flex-wrap: wrap-reverse;
+}
+.main__right{
+    box-shadow: var(--boxshadow);
+    position: sticky;
+    top: 20px;
+    width: 25%;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: var(--backgrounBlock);
+    margin-left: 10px;
+    max-height: 325px;  
+}
+.footer__content{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer__content p{
+    color: var(--colorFooterHeader);
+}
+
+

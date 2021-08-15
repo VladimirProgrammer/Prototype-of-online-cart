@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Prototype of cart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="padding_side">
+                <div class="header__content">
+                    <h1>LOGO</h1>
+                    <form action="/search/" target="_blank">
+                        <i class="fas fa-search"></i>
+                        <input type="hidden" name="searchid">
+                        <input class="header__search" type="search" name="text" required placeholder="Поиск">
+                    </form>
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Войти</a></li>
+                        <li><a href="">Контакты</a></li>
+                        <li><a href="">Корзина</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <div class="padding_side">
+                <div class="main__content">
+                    <div class="main__left">
+                        <div class="main__product">
+                            <div class="main__intro">
+                                <h2>Корзина</h2>
+                            </div>
+        
+                            <div class="main__item">
+                                <div class="main__data">
+                                    <div class="main__photo">
+                                        <img src="./img/sneackers.jpg" alt="">
+                                    </div>
+                                    <div class="main__description">
+                                        <h3>Кроссовки, Nike</h3>
+                                        <p>Цвет белый</p>
+                                        <p>Размер 38</p>
+                                        <p>Цена 10000.00 руб/шт</p>
+                                    </div>
+
+                                </div>
+                                <div class="main__quantity">
+                                    <label for="main__quantity" class="main__quantity">Количество</label>
+                                    <input class="main__control" type="number" value="1" min="1">
+                                </div>
+
+                                <div class="main__price d-none">10000.00</div>
+                        
+                                <div class="main__lineprice">
+                                    <span class="main__lineprice">10000.00</span>
+                                </div>
+                                <div class="main__removeitem">
+                                    <button class="main__removeproduct">Удалить</button>
+                                </div>
+                            </div>
+                            <div class="main__item">
+                                <div class="main__data">
+                                    <div class="main__photo">
+                                        <img src="./img/soap.jpg" alt="">
+                                    </div>
+                                    <div class="main__description">
+                                        <h3>Мыло, Yardley</h3>
+                                        <p>London</p>
+                                        <p>Гипоаллергенное</p>
+                                        <p>Цена 10000.00 руб/шт</p>
+                                    </div>
+                                </div>
+                                <div class="main__quantity">
+                                    <label for="main__quantity" class="main__quantity">Количество</label>
+                                    <input class="main__control" type="number" value="1" min="1">
+                                </div>
+
+                                <div class="main__price d-none">100.00</div>
+                                <div class="main__lineprice">
+                                    <span class="main__lineprice">100.00</span>
+                                </div>
+                                <div class="main__removeitem">
+                                    <button class="main__removeproduct">Удалить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main__customer">
+                            <div class="main__intro">
+                                <h2>Ваши данные</h2><i class="far fa-question-circle"></i>
+                                 <p class="tooltip">Для заказа товаров требуется регистрация. Если вы уже зарегистрированы, войдите в свою учетную запись</p>
+                                <button class="main__enter">Войти</button>
+                            </div>
+
+                            <div class="main__input">
+                                <input type="text" placeholder="Имя">
+                                <input type="text" placeholder="Фамилия">
+                                <input type="tel" placeholder="+7(___)__-__">
+                                <input type="text" placeholder="e-mail">
+                                
+                            </div>   
+                            <input type="checkbox" id="logo" name="logo" checked>
+                            <label for="logo">Получать эксклюзивные скидки в SMS‑рассылке от LOGO</label>       
+                        </div>
+                        <div class="main__delivery">
+                            <div class="main__intro">
+                                <h2>Способ доставки</h2>
+                            </div>
+                            <div class="main__input">
+                                <div class="main__buttons">
+                                    <button class="delivery">Доставка</button>
+                                    <button class="delivery" id="selfservice">Самовывоз</button>
+                                    <p id="adress">Адрес будет виден после нажатия Самовывоз</p>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="main__payment">
+                            <div class="main__intro">
+                                <h2>Способ оплаты</h2>
+                            </div>
+                            <div class="main__input">
+                                <button class="active-button">Наличными или картой при получении</button>
+                                <button>Банковской картой онлайн</button>
+                               <button>ЮMoney</button>
+                                <button>Система быстрых платежей - QR Code</button>
+                                <button>В рассрочку</button>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="main__right totals">
+                        <div class="main__total">
+                            <h2>Итого</h2>
+                            <h2><span class="totals-value cart-total">12120.00</span> Р</h2>
+                        </div>
+                        <div class="main__intro totals-item">
+                            <p>Итого без НДС</p>
+                            <p class="totals-value" id="cart-subtotal">10100.00</p>
+                        </div>
+                        <div class="main__intro totals-item">
+                            <p>НДС</p>
+                            <p class="totals-value" id="cart-tax">2020.00</p>
+                        </div>
+                    
+                        <button class="main__button">Оформить заказ <!--на<br> <span class="totals-value cart-total">24000.00</span> руб--></button>
+                            <input type="checkbox" id="logo" name="logo" checked>
+                        <label for="logo"><a href="">Согласен с условиями</a> Правил пользования торговой площадкой и правилами возврата</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="padding_side">
+                <div class="footer__content">
+                    <p>&copy;LOGO</p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>  
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
